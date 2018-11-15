@@ -1,0 +1,41 @@
+{
+  "name": "Chrome Tools",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Simple tools for Google Chrome",
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "page-script.js"
+  ],
+  "browser_action": {
+    "default_icon": "icon/48x48.png"
+  },
+  "icons": {
+    "16": "icon/16x16.png",
+    "24": "icon/24x24.png",
+    "32": "icon/32x32.png",
+    "48": "icon/48x48.png",
+    "64": "icon/64x64.png",
+    "96": "icon/96x96.png",
+    "128": "icon/128x128.png",
+    "256": "icon/256x256.png",
+    "512": "icon/512x512.png"
+  }
+}
